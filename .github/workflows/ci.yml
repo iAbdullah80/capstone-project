@@ -14,7 +14,9 @@
             runs-on: ubuntu-latest
             steps:
             - uses: actions/checkout@v4
+
             - name: testing
               run: |
+                    ls
                     docker build -f .\dockerfile.test -t test:latest .
                     docker run test:latest
