@@ -1,3 +1,4 @@
+name: Capstone Project
 services:
   web:
     image: aalahideb/flask-app:latest
