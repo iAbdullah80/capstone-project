@@ -43,5 +43,5 @@
                     tags: |
                         ${{ secrets.DOCKER_USERNAME }}/flask-app:latest
                         ${{ secrets.DOCKER_USERNAME }}/flask-app:${{ github.sha }}
-                    cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/go-app:buildcache
-                    cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/go-app:buildcache,mode=max
+                    cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/flask-app:buildcache
+                    cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/flask-app:buildcache,mode=max
