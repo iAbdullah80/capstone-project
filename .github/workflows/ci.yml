@@ -18,7 +18,7 @@
 
             - name: testing
               run: |
-                    docker build -f dockerTest/dockerfile -t test:latest .
+                    docker build -f dockerTests/dockerfile -t test:latest .
                     docker run test:latest
 
         build-and-push-image:
