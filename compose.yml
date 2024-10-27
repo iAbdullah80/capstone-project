@@ -47,7 +47,11 @@ services:
         retries: 10
     networks:
       - capstone-network
-
+  
+  test:
+    build: .
+    command: python test_app.py
+    
 networks:
   capstone-network:
     driver: bridge

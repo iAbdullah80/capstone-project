@@ -17,9 +17,7 @@
             - uses: actions/checkout@v4
 
             - name: testing
-              run: |
-                    docker build -f dockerTests/dockerfile -t test:latest .
-                    docker run test:latest
+              run: docker compose up test
 
         build-and-push-image:
             if: ${{github.event_name=='push'}}
