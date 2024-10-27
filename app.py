@@ -3,6 +3,7 @@ import redis
 import mysql.connector
 import os
 import time
+import socket
 
 app = Flask(__name__)
 
@@ -34,7 +35,7 @@ def init_db():
 
 @app.route('/')
 def index():
-    return render_template('index.html', host=os.name)
+    return render_template('index.html', host=socket.gethostname())
 
 @app.route('/add_user', methods=['POST'])
 def add_user():
